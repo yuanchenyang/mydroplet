@@ -1,0 +1,24 @@
+[submodule "3d-particles"]
+	path = 3d-particles
+	url = https://github.com/yuanchenyang/3d-particles.git
+[submodule "python-visualizer"]
+	path = python-visualizer
+	url = https://github.com/enah/python-visualizer.git
+[submodule "coding-js"]
+	path = coding-js
+	url = https://github.com/yuanchenyang/coding-js.git
+[submodule "LambdaJS"]
+	path = LambdaJS
+	url = https://github.com/yuanchenyang/LambdaJS
+[submodule "dashboard"]
+	path = dashboard
+	url = https://github.com/yuanchenyang/dashboard.git
+[submodule "61a-website"]
+	path = 61a-website
+	url = https://github.com/yuanchenyang/61a-website.git
+[submodule "facebook-group-archiver"]
+	path = facebook-group-archiver
+	url = https://github.com/yuanchenyang/facebook-group-archiver.git
+[submodule "personal-website"]
+	path = personal-website
+	url = https://github.com/yuanchenyang/personal-website.git
