@@ -9,12 +9,17 @@ sudo apt dist-upgrade
 ## Enable auto-upgrades
 sudo dpkg-reconfigure unattended-upgrades
 
-## Install docker
+## Install docker and docker-compose
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
 # apt-cache policy docker-ce
 sudo apt install docker-ce
 # sudo systemctl status docker
+
+mkdir -p ~/.docker/cli-plugins/
+curl -SL https://github.com/docker/compose/releases/download/v2.2.2/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
+chmod +x ~/.docker/cli-plugins/docker-compose
+# docker compose version
 
 ## Install other programs
 sudo apt install emacs python3 zsh

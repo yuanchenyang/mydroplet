@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  www:
+    build: ./www
+    image: yuanchenyang/www
+    ports:
+      - "8000:80"
+  dashboard:
+    build: ./dashboard_app
+    image: yuanchenyang/dashboard
+    ports:
+      - "8001:80"
+  pdf:
+    build: ./pdf-viewer
+    image: yuanchenyang/pdf
+    ports:
+      - "8002:80"
