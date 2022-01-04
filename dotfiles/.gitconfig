@@ -1,0 +1,5 @@
+[user]
+	email = yuanchenyang@gmail.com
+	name = Chenyang Yuan
+[pull]
+	rebase = false
