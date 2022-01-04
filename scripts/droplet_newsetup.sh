@@ -23,3 +23,8 @@ sudo apt install emacs python3 zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 ## Clone git repo and copy dotfiles
+git clone git@github.com:yuanchenyang/mydroplet.git
+cd mydroplet
+git submodule init
+git submodule update
+cp dotfiles/.* ~/
