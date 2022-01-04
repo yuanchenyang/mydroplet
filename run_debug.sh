@@ -1,2 +1,2 @@
 #!/bin/bash
-docker compose up -f docker-compose.yml
+docker-compose up -f docker-compose.yml
