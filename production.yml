@@ -1,18 +1,14 @@
 services:
   www:
     restart: unless-stopped
-    logging:
-      driver: journald
   dashboard:
     restart: unless-stopped
-    logging:
-      driver: journald
   pdf:
     restart: unless-stopped
-    logging:
-      driver: journald
   proxy:
+    restart: unless-stopped
     build: ./proxy
     image: yuanchenyang/proxy
+    container_name: proxy
     ports:
       - "80:80"

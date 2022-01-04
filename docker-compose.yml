@@ -3,15 +3,18 @@ services:
   www:
     build: ./www
     image: yuanchenyang/www
-    ports:
-      - "8000:80"
+    container_name: www
+    expose:
+      - "80"
   dashboard:
     build: ./dashboard_app
     image: yuanchenyang/dashboard
-    ports:
-      - "8001:80"
+    container_name: dashboard
+    expose:
+      - "80"
   pdf:
     build: ./pdf-viewer
     image: yuanchenyang/pdf
-    ports:
-      - "8002:80"
+    container_name: pdf
+    expose:
+      - "80"
