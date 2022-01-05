@@ -12,6 +12,10 @@ services:
     build: ./visualizer
     image: yuanchenyang/visualizer
     container_name: visualizer
+  archiver:
+    build: ./archiver
+    image: yuanchenyang/archiver
+    container_name: archiver
   pdf:
     build: ./pdf-viewer
     image: yuanchenyang/pdf

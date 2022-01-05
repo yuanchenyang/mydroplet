@@ -17,6 +17,12 @@ services:
       driver: journald
     expose:
       - "80"
+  archiver:
+    restart: unless-stopped
+    logging:
+      driver: journald
+    expose:
+      - "80"
   pdf:
     restart: unless-stopped
     logging:
