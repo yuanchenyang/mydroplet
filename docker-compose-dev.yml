@@ -8,9 +8,9 @@ services:
   visualizer:
     ports:
       - "8002:80"
-  archiver:
+  pdf:
     ports:
       - "8003:80"
-  pdf:
+  archiver:
     ports:
       - "8004:80"
