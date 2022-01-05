@@ -3,14 +3,26 @@ services:
     restart: unless-stopped
     logging:
       driver: journald
+    expose:
+      - "80"
   dashboard:
     restart: unless-stopped
     logging:
       driver: journald
+    expose:
+      - "80"
+  visualizer:
+    restart: unless-stopped
+    logging:
+      driver: journald
+    expose:
+      - "80"
   pdf:
     restart: unless-stopped
     logging:
       driver: journald
+    expose:
+      - "80"
   proxy:
     restart: unless-stopped
     build: ./proxy

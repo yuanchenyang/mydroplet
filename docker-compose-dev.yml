@@ -1,0 +1,13 @@
+services:
+  www:
+    ports:
+      - "8000:80"
+  dashboard:
+    ports:
+      - "8001:80"
+  visualizer:
+    ports:
+      - "8002:80"
+  pdf:
+    ports:
+      - "8003:80"

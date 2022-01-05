@@ -4,17 +4,15 @@ services:
     build: ./www
     image: yuanchenyang/www
     container_name: www
-    expose:
-      - "80"
   dashboard:
     build: ./dashboard_app
     image: yuanchenyang/dashboard
     container_name: dashboard
-    expose:
-      - "80"
+  visualizer:
+    build: ./visualizer
+    image: yuanchenyang/visualizer
+    container_name: visualizer
   pdf:
     build: ./pdf-viewer
     image: yuanchenyang/pdf
     container_name: pdf
-    expose:
-      - "80"
