@@ -38,3 +38,9 @@ services:
       - "80:80"
     logging:
       driver: journald
+    depends_on:
+      - www
+      - dashboard
+      - visualizer
+      - archiver
+      - pdf

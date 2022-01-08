@@ -10,5 +10,7 @@ COPY dashboard ./dashboard
 COPY dashboard.wsgi ./
 RUN pip install --no-cache-dir -r dashboard/requirements.txt
 
+RUN mkdir -p /usr/local/apache2/htdocs/dashboard_app/cache && chmod 777 /usr/local/apache2/htdocs/dashboard_app/cache
+
 ### Copy http config
 COPY httpd.conf /usr/local/apache2/conf/httpd.conf
