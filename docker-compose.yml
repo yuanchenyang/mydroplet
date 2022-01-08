@@ -4,6 +4,10 @@ services:
     build: ./www
     image: yuanchenyang/www
     container_name: www
+    volumes:
+      - webdav:/usr/local/apache2/webdav
+    secrets:
+      - webdav_cred
   dashboard:
     build: ./dashboard_app
     image: yuanchenyang/dashboard
@@ -26,3 +30,8 @@ services:
     build: ./pdf-viewer
     image: yuanchenyang/pdf
     container_name: pdf
+volumes:
+  webdav:
+secrets:
+  webdav_cred:
+    file: ./secrets/webdav.password
