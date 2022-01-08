@@ -10,10 +10,6 @@ RUN jekyll build
 ### Main Server ###
 FROM httpd:2.4
 
-### Copy personal-website ###
-WORKDIR /usr/local/apache2/htdocs/personal-website/_site
-COPY --from=jekyll /srv/jekyll/personal-website/_site ./
-
 ### Build 3d-particles ###
 WORKDIR /usr/local/apache2/htdocs/particles
 COPY 3d-particles ./
@@ -29,6 +25,10 @@ COPY coding-js ./
 ### Build lambdajs ###
 WORKDIR /usr/local/apache2/htdocs/LambdaJS
 COPY LambdaJS ./
+
+### Copy personal-website ###
+WORKDIR /usr/local/apache2/htdocs/personal-website/_site
+COPY --from=jekyll /srv/jekyll/personal-website/_site ./
 
 ### Copy http config
 COPY httpd.conf /usr/local/apache2/conf/httpd.conf

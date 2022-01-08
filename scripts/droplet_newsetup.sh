@@ -32,3 +32,9 @@ cd mydroplet
 git submodule init
 git submodule update
 cp dotfiles/.* ~/
+
+
+## Install certbot
+sudo snap install core; sudo snap refresh core
+sudo snap install --classic certbot
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
