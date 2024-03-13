@@ -2,6 +2,7 @@
 FROM ruby:latest as jekyll
 RUN gem install jekyll
 RUN gem install jekyll-paginate
+RUN gem install jekyll-sitemap
 
 WORKDIR /srv/jekyll/personal-website
 COPY personal-website ./
