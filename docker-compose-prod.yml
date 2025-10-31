@@ -1,36 +1,40 @@
 services:
   www:
-    restart: unless-stopped
+    restart: always
     logging:
       driver: journald
     expose:
       - "80"
   dashboard:
-    restart: unless-stopped
+    restart: always
     logging:
       driver: journald
     expose:
       - "80"
+    deploy:
+      resources:
+        limits:
+          memory: 300M
   visualizer:
-    restart: unless-stopped
+    restart: always
     logging:
       driver: journald
     expose:
       - "80"
   archiver:
-    restart: unless-stopped
+    restart: always
     logging:
       driver: journald
     expose:
       - "80"
   pdf:
-    restart: unless-stopped
+    restart: always
     logging:
       driver: journald
     expose:
       - "80"
   proxy:
-    restart: unless-stopped
+    restart: always
     build: ./proxy
     image: yuanchenyang/proxy
     container_name: proxy
