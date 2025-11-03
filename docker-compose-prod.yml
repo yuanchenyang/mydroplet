@@ -11,10 +11,8 @@ services:
       driver: journald
     expose:
       - "80"
-    deploy:
-      resources:
-        limits:
-          memory: 300M
+    mem_limit: 300M
+    memswap_limit: 300M
   visualizer:
     restart: always
     logging:
